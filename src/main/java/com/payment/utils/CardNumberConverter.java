@@ -21,8 +21,6 @@ public class CardNumberConverter implements AttributeConverter<String,String> {
     public String convertToDatabaseColumn(String attribute) {
         if (attribute == null) return null;
         try {
-            System.out.println("Attribute: "+attribute);
-            System.out.println("AES key: "+AES_SECRET_KEY);
             SecretKeySpec key = new SecretKeySpec(AES_SECRET_KEY.getBytes(), ALGORITHM);
             Cipher cipher = Cipher.getInstance(ALGORITHM);
             cipher.init(Cipher.ENCRYPT_MODE, key);
