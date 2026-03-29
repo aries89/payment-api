@@ -63,11 +63,19 @@ would be used instead of a static API key.
 
 The application uses the following environment variables:
 
-| Variable       | Description            |
-| -------------- | ---------------------- |
-| DB_PASSWORD    | Database password      |
-| API_SECRET_KEY | API authentication key |
-| AES_SECRET_KEY | Encryption key         |
+| Variable       | Description |
+| -------------- | ----------- |
+| DB_PASSWORD    | Database password |
+| API_SECRET_KEY | API authentication key (any plain text) |
+| AES_SECRET_KEY | 16-character plain text AES key |
+
+**Example for AES_SECRET_KEY:**  
+```bash
+AES_SECRET_KEY="0123456789012345"
+
+**Example for API_SECRET_KEY:**  
+```bash
+API_SECRET_KEY="my-api-key"
 
 Create a `.env` file:
 
