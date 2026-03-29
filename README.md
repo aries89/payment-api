@@ -72,10 +72,11 @@ The application uses the following environment variables:
 **Example for AES_SECRET_KEY:**  
 ```bash
 AES_SECRET_KEY="0123456789012345"
-
+```
 **Example for API_SECRET_KEY:**  
 ```bash
 API_SECRET_KEY="my-api-key"
+```
 
 Create a `.env` file:
 
